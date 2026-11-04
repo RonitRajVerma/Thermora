@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  *, ::before, ::after {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code, kbd, samp, pre, .font-mono {
+    font-family: Arial, monospace;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}

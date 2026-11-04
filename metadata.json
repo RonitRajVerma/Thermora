@@ -1,0 +1,8 @@
+{
+  "name": "Thermora",
+  "description": "Resource intelligence for compute infrastructure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
