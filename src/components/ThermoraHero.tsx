@@ -188,7 +188,7 @@ ASSUMPTIONS: Standard baseline assumptions: 80% continuous IT load, 50°C coolan
     <div 
       id="thermora-homepage"
       className="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex flex-col items-center space-y-8"
-      style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+      style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
     >
       
       {/* 1. Brand Header */}

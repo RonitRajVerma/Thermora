@@ -459,7 +459,7 @@ void loop() {
                     borderColor: "#ffffff15",
                     fontSize: "11px",
                     borderRadius: "8px",
-                    fontFamily: "monospace"
+                    fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                   }}
                 />
                 <Line 

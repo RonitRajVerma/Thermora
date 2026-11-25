@@ -248,7 +248,7 @@ export function SystemFlowSimulation({ onClose }: SimulationProps) {
     <div 
       id="system-flow-simulation"
       className="w-full bg-[#061822]/95 border border-cyan-500/30 rounded-3xl p-4 sm:p-7 shadow-[0_20px_60px_rgba(0,0,0,0.8)] text-slate-100 transition-all font-sans"
-      style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+      style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
     >
       {/* 1. Top Status & Process Stage Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-white/10">

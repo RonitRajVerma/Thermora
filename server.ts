@@ -333,9 +333,29 @@ app.post("/api/chat", async (req, res) => {
   };
 
   // Comprehensive Engineering Knowledge & Thermodynamic Engine
-  // Comprehensive Engineering Knowledge & Thermodynamic Engine
   const generateEngineeringAnalysis = (q: string, ctx: any) => {
-    const qLower = q.toLowerCase();
+    const qLower = q.toLowerCase().trim();
+
+    // Casual greetings
+    if (
+      /^(hi|hello|hey|greetings|howdy|yo|good\s*(morning|afternoon|evening))\b/i.test(qLower) ||
+      qLower === "hi" ||
+      qLower === "hello" ||
+      qLower === "hey"
+    ) {
+      return "Hey! I'm Thermora. How can I help you today? I can answer questions about our project, help you explore data center waste-heat recovery, calculate water production, or discuss our liquid cooling and membrane distillation models.";
+    }
+
+    // Who are you / What is Thermora
+    if (
+      qLower.includes("who are you") ||
+      qLower.includes("what is thermora") ||
+      qLower.includes("what do you do") ||
+      qLower.includes("tell me about yourself") ||
+      qLower.includes("tell me about thermora")
+    ) {
+      return "I'm Thermora, an AI assistant for compute infrastructure resource recovery. The Thermora project captures waste heat from high-density data centers using direct-to-chip liquid cooling and repurposes it to produce clean, demineralized water through a hybrid Reverse Osmosis (RO) and Membrane Distillation (MD) system.\n\nI can help you model thermal dissipation, calculate water recovery for different MW capacities, or explain our physical prototype telemetry and thermodynamics. What would you like to explore?";
+    }
 
     // Direct Climate Resilience / ESG queries
     if (
@@ -499,7 +519,6 @@ ASSUMPTIONS & LIMITATIONS:
         contents: contentsPayload,
         config: {
           systemInstruction,
-          temperature: 0.2,
         },
       });
       responseText = response.text || "";
@@ -512,7 +531,6 @@ ASSUMPTIONS & LIMITATIONS:
           contents: contentsPayload,
           config: {
             systemInstruction,
-            temperature: 0.2,
           },
         });
         responseText = response2.text || "";

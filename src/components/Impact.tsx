@@ -43,7 +43,7 @@ export function Impact() {
   return (
     <div 
       className="min-h-[calc(100vh-4rem)] p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto space-y-6 pt-24"
-      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+      style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
     >
       {/* =========================================================================
           1. HEADER

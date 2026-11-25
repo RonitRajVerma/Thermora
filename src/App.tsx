@@ -30,7 +30,7 @@ function TopNavBar() {
       <nav 
         id="top-pill-navigation"
         className="pointer-events-auto w-full max-w-5xl bg-[#061822]/90 border border-cyan-500/30 backdrop-blur-xl rounded-full px-5 py-2.5 flex items-center justify-between shadow-[0_10px_35px_rgba(0,0,0,0.8)] transition-all"
-        style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+        style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
       >
         {/* Brand Left */}
         <NavLink 
@@ -73,7 +73,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div 
       className="min-h-screen bg-[#020b12] text-slate-100 text-sm antialiased selection:bg-cyan-500/30 selection:text-cyan-200 flex flex-col"
-      style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+      style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
     >
       <TopNavBar />
       <main className="flex-1 w-full pt-16">

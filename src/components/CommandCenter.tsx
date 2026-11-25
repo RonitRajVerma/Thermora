@@ -126,8 +126,8 @@ export function CommandCenter() {
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
                 <XAxis dataKey="time" hide />
-                <YAxis stroke="#444" tick={{fontSize: 10, fill: '#666', fontFamily: 'monospace'}} tickFormatter={(v) => v.toFixed(1)} />
-                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#333', fontSize: '11px', fontFamily: 'monospace' }} itemStyle={{ color: '#ccc' }} labelFormatter={() => ''} />
+                <YAxis stroke="#444" tick={{fontSize: 10, fill: '#666', fontFamily: "'Inter', Arial, sans-serif"}} tickFormatter={(v) => v.toFixed(1)} />
+                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#333', fontSize: '11px', fontFamily: "'Inter', Arial, sans-serif" }} itemStyle={{ color: '#ccc' }} labelFormatter={() => ''} />
                 <Area type="monotone" dataKey="recoveredHeat" name="Recovered Heat (MWt)" stroke="#ef4444" fillOpacity={1} fill="url(#colorRecov)" isAnimationActive={false} />
               </AreaChart>
             </ResponsiveContainer>
@@ -142,8 +142,8 @@ export function CommandCenter() {
               <ComposedChart data={chartData} margin={{ top: 5, right: 0, left: -20, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
                 <XAxis dataKey="time" hide />
-                <YAxis stroke="#444" tick={{fontSize: 10, fill: '#666', fontFamily: 'monospace'}} />
-                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#333', fontSize: '11px', fontFamily: 'monospace' }} itemStyle={{ color: '#ccc' }} labelFormatter={() => ''} />
+                <YAxis stroke="#444" tick={{fontSize: 10, fill: '#666', fontFamily: "'Inter', Arial, sans-serif"}} />
+                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#333', fontSize: '11px', fontFamily: "'Inter', Arial, sans-serif" }} itemStyle={{ color: '#ccc' }} labelFormatter={() => ''} />
                 <Area type="monotone" dataKey="roWater" stackId="a" name="RO Contribution (L/h)" fill="#1e3a8a" stroke="#3b82f6" isAnimationActive={false} />
                 <Area type="monotone" dataKey="mdWater" stackId="a" name="MD Contribution (L/h)" fill="#083344" stroke="#06b6d4" isAnimationActive={false} />
               </ComposedChart>
@@ -159,8 +159,8 @@ export function CommandCenter() {
               <LineChart data={chartData} margin={{ top: 5, right: 0, left: -20, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
                 <XAxis dataKey="time" hide />
-                <YAxis stroke="#444" tick={{fontSize: 10, fill: '#666', fontFamily: 'monospace'}} domain={['auto', 'auto']} />
-                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#333', fontSize: '11px', fontFamily: 'monospace' }} itemStyle={{ color: '#ccc' }} labelFormatter={(t) => t ? format(new Date(t), 'HH:mm:ss') : ''} />
+                <YAxis stroke="#444" tick={{fontSize: 10, fill: '#666', fontFamily: "'Inter', Arial, sans-serif"}} domain={['auto', 'auto']} />
+                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#333', fontSize: '11px', fontFamily: "'Inter', Arial, sans-serif" }} itemStyle={{ color: '#ccc' }} labelFormatter={(t) => t ? format(new Date(t), 'HH:mm:ss') : ''} />
                 <Line type="monotone" dataKey="hotTemperature" name="Hot Side (°C)" stroke="#ef4444" dot={false} isAnimationActive={false} strokeWidth={1.5} />
                 <Line type="monotone" dataKey="coldTemperature" name="Cold Side (°C)" stroke="#3b82f6" dot={false} isAnimationActive={false} strokeWidth={1.5} />
                 <Line type="monotone" dataKey="ambientTemperature" name="Ambient (°C)" stroke="#9ca3af" dot={false} isAnimationActive={false} strokeWidth={1} strokeDasharray="4 4" />
@@ -373,24 +373,24 @@ function ProcessFlowVisualization({ itLoad, thermal, mdWater, roWater }: any) {
           <circle cx="15" cy="34" r="2" fill="#10b981" />
           <circle cx="15" cy="49" r="2" fill="#10b981" />
           
-          <text x="60" y="-10" fill="#9ca3af" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="1">COMPUTE NODE</text>
-          <text x="60" y="95" fill="#f3f4f6" fontSize="12" fontFamily="monospace" textAnchor="middle">{itLoad.toFixed(1)} MW</text>
+          <text x="60" y="-10" fill="#9ca3af" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle" letterSpacing="1">COMPUTE NODE</text>
+          <text x="60" y="95" fill="#f3f4f6" fontSize="12" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">{itLoad.toFixed(1)} MW</text>
         </g>
 
         {/* HEAT EXCHANGER NODE */}
         <g transform="translate(250, 75)">
           <rect x="0" y="0" width="120" height="80" rx="4" fill="#1a0f0f" stroke="#7f1d1d" strokeWidth="2" />
           <path d="M 20 20 L 100 20 L 20 40 L 100 40 L 20 60 L 100 60" fill="none" stroke="#ef4444" strokeWidth="4" strokeLinejoin="round" opacity="0.5" />
-          <text x="60" y="-10" fill="#ef4444" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="1">THERMAL LOOP</text>
-          <text x="60" y="95" fill="#fca5a5" fontSize="12" fontFamily="monospace" textAnchor="middle">{thermal.toFixed(1)} MWt</text>
+          <text x="60" y="-10" fill="#ef4444" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle" letterSpacing="1">THERMAL LOOP</text>
+          <text x="60" y="95" fill="#fca5a5" fontSize="12" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">{thermal.toFixed(1)} MWt</text>
         </g>
 
         {/* RO STAGE NODE */}
         <g transform="translate(250, 180)">
           <rect x="0" y="0" width="120" height="60" rx="4" fill="#0f172a" stroke="#1e3a8a" strokeWidth="2" />
           <line x1="20" y1="30" x2="100" y2="30" stroke="#3b82f6" strokeWidth="2" strokeDasharray="4 2" />
-          <text x="60" y="-10" fill="#60a5fa" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="1">RO STAGE</text>
-          <text x="60" y="75" fill="#93c5fd" fontSize="12" fontFamily="monospace" textAnchor="middle">{roWater.toFixed(0)} L/h</text>
+          <text x="60" y="-10" fill="#60a5fa" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle" letterSpacing="1">RO STAGE</text>
+          <text x="60" y="75" fill="#93c5fd" fontSize="12" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">{roWater.toFixed(0)} L/h</text>
         </g>
 
         {/* MD STAGE NODE */}
@@ -398,24 +398,24 @@ function ProcessFlowVisualization({ itLoad, thermal, mdWater, roWater }: any) {
           <rect x="0" y="0" width="120" height="155" rx="4" fill="#082f49" stroke="#0369a1" strokeWidth="2" />
           {/* Vertical membrane simulation */}
           <line x1="60" y1="20" x2="60" y2="135" stroke="#06b6d4" strokeWidth="4" strokeDasharray="6 3" />
-          <text x="60" y="-10" fill="#22d3ee" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="1">MD STAGE</text>
-          <text x="60" y="170" fill="#67e8f9" fontSize="12" fontFamily="monospace" textAnchor="middle">{mdWater.toFixed(0)} L/h</text>
+          <text x="60" y="-10" fill="#22d3ee" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle" letterSpacing="1">MD STAGE</text>
+          <text x="60" y="170" fill="#67e8f9" fontSize="12" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">{mdWater.toFixed(0)} L/h</text>
         </g>
 
         {/* OUTPUT NODE */}
         <g transform="translate(680, 20)">
           <rect x="0" y="0" width="100" height="60" rx="4" fill="#042f2e" stroke="#0f766e" strokeWidth="2" />
           <path d="M 20 40 Q 50 30 80 40 L 80 60 L 20 60 Z" fill="#14b8a6" opacity="0.3" />
-          <text x="50" y="-10" fill="#14b8a6" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="1">FRESH WATER</text>
-          <text x="50" y="35" fill="#5eead4" fontSize="14" fontFamily="monospace" textAnchor="middle font-bold">{(roWater + mdWater).toFixed(0)} L/h</text>
+          <text x="50" y="-10" fill="#14b8a6" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle" letterSpacing="1">FRESH WATER</text>
+          <text x="50" y="35" fill="#5eead4" fontSize="14" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle font-bold">{(roWater + mdWater).toFixed(0)} L/h</text>
         </g>
         
         {/* LABELS */}
-        <text x="310" y="295" fill="#475569" fontSize="10" fontFamily="monospace" textAnchor="middle">SALINE FEED</text>
-        <text x="450" y="200" fill="#4f46e5" fontSize="10" fontFamily="monospace" textAnchor="middle">CONCENTRATE</text>
-        <text x="590" y="295" fill="#312e81" fontSize="10" fontFamily="monospace" textAnchor="middle">BRINE OUT</text>
-        <text x="500" y="40" fill="#0ea5e9" fontSize="10" fontFamily="monospace" textAnchor="middle">DISTILLATE</text>
-        <text x="450" y="105" fill="#ea580c" fontSize="10" fontFamily="monospace" textAnchor="middle">MD HEAT INPUT</text>
+        <text x="310" y="295" fill="#475569" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">SALINE FEED</text>
+        <text x="450" y="200" fill="#4f46e5" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">CONCENTRATE</text>
+        <text x="590" y="295" fill="#312e81" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">BRINE OUT</text>
+        <text x="500" y="40" fill="#0ea5e9" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">DISTILLATE</text>
+        <text x="450" y="105" fill="#ea580c" fontSize="10" fontFamily="'Inter', Arial, sans-serif" textAnchor="middle">MD HEAT INPUT</text>
       </svg>
     </div>
   )

@@ -140,7 +140,7 @@ export function IndiaView() {
     <div
       id="india-opportunity-view"
       className="w-full h-[calc(100vh-4.25rem)] overflow-hidden bg-[#020b12] text-slate-100 flex flex-col font-sans select-none relative"
-      style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+      style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
     >
       {/* Top Header Strip */}
       <header className="px-5 py-3 border-b border-white/10 bg-[#061e29]/90 backdrop-blur-md shrink-0 flex items-center justify-between gap-3 z-20 shadow-md">
@@ -303,7 +303,7 @@ export function IndiaView() {
                       y={cy + dc.labelOffset.y}
                       fill={isSelected ? "#ffffff" : isHovered ? "#38bdf8" : "#e2e8f0"}
                       fontSize={isSelected ? "13" : "11"}
-                      fontFamily="Arial, sans-serif"
+                      fontFamily="'Inter', Arial, sans-serif"
                       fontWeight={isSelected ? "bold" : "600"}
                       textAnchor={dc.labelOffset.anchor}
                       filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))"
@@ -331,7 +331,7 @@ export function IndiaView() {
                           y={cy + dc.labelOffset.y + 18}
                           fill="#38bdf8"
                           fontSize="9.5"
-                          fontFamily="Arial, sans-serif"
+                          fontFamily="'Inter', Arial, sans-serif"
                           fontWeight="bold"
                           textAnchor="middle"
                         >
